@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANSER FC | MANAGEMENT MATCH & ACADEMY</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .logo {
+            width: 140px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #ff9f43;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #cccccc;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+        .feature-badge {
+            background-color: #1e1e1e;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #333;
+        }
+        .btn-menu {
+            display: block;
+            width: 100%;
+            background-color: #ff9f43;
+            color: #121212;
+            border: none;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-menu:hover {
+            background-color: #e08b34;
+            transform: translateY(-2px);
+        }
+        .btn-back {
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        .btn-back:hover {
+            background-color: #555;
+        }
+
+        /* Gaya untuk Galeri Foto Kelompok Usia */
+        .grid-kategori {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+        @media(min-width: 480px) {
+            .grid-kategori {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .card-usia {
+            background-color: #1e1e1e;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 12px;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+        .card-usia:hover {
+            transform: translateY(-3px);
+            border-color: #ff9f43;
+        }
+        .card-usia img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #2a2a2a;
+        }
+        .card-usia h3 {
+            margin: 12px 0 6px 0;
+            font-size: 1.1rem;
+            color: #ff9f43;
+        }
+        .card-usia p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #b3b3b3;
+            line-height: 1.4;
+        }
+
+        /* Kelas Animasi Halaman */
+        .hidden {
+            display: none;
+        }
+        .page {
+            animation: fadeIn 0.4s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div id="main-page" class="page">
+            <img src="pepe-removebg-preview.png" alt="Panser FC Logo" class="logo"/>
+            <h1>PANSER FC</h1>
+            <p class="subtitle">Layanan manajemen pertandingan, dan pembinaan sepak bola usia muda yang profesional.</p>
+
+            <div class="features">
+                <div class="feature-badge">⏱️ Fast Response</div>
+            </div>
+
+            <button class="btn-menu" onclick="bukaHalaman('layanan-page')">Layanan Pertandingan</button>
+            <button class="btn-menu" onclick="bukaHalaman('usia-page')">Kelompok Usia & Tim</button>
+        </div>
+
+        <div id="layanan-page" class="page hidden">
+            <h2>Layanan Pertandingan</h2>
+            <p class="subtitle">Panser FC desa Kasmaran Kecamatan Widasari Kabupaten Indramayu:</p>
+
+            <button class="btn-menu" onclick="bukaHalaman('info-friendly')">Friendly Match / Sparring</button>
+
+            <button class="btn-back" onclick="bukaHalaman('main-page')">Kembali</button>
+        </div>
+
+        <div id="info-friendly" class="page hidden">
+            <h2>Friendly Match / Sparring</h2>
+            <p class="subtitle">Ingin menguji kemampuan tim kamu melawan akademi PANSER FC? Jadwalkan pertandingan persahabatan di sini.</p>
+            <button class="btn-menu" onclick="window.open('https://wa.me/6281382776233?text=Halo%20Admin%20Panser%20FC,%20salam%20kenal.%20Kami%20dari%20tim%20%5BIsi%20Nama%20Tim%20Di%20Sini%5D%20bermaksud%20ingin%20mengajak%20Friendly%20Match%20(Sparring)%20dengan%20tim%20Panser%20FC.%20Kira-kira%20kapan%20ada%20jadwal%20kosong%20ya?%20Terima%20kasih.', '_blank')">Hubungi Admin</button>
+            <button class="btn-back" onclick="bukaHalaman('layanan-page')">Kembali</button>
+        </div>
+
+        <div id="usia-page" class="page hidden">
+            <h2>Kelompok Usia</h2>
+            <p class="subtitle">Daftar pembinaan talenta muda sepak bola PANSER FC Ds. Kasmaran berdasarkan kategori umur:</p>
+
+            <div class="grid-kategori">
+                <div class="card-usia">
+                  <img src="panser u-13.jpeg" alt="PANSER U-13 PUTRA"/>
+                  <h3>PANSER U-13 PUTRA</h3>
+                  <p>Pembinaan bakat sepak bola usia dini generasi emas putra Ds. Kasmaran.</p>
+                </div>
+
+                <div class="card-usia">
+                  <img src="putri u-13.jpeg" alt="PANSER U-13 PUTRI"/>
+                  <h3>PANSER U-13 PUTRI</h3>
+                  <p>Skuad srikandi muda berbakat kebanggaan dalam pembinaan sepak bola wanita.</p>
+                </div>
+
+                <div class="card-usia">
+                  <img src="panser u-15.jpeg" alt="PANSER U-15 PUTRA"/>
+                  <h3>PANSER U-15 PUTRA</h3>
+                  <p>Fokus penguatan fisik, pematangan taktik tim, dan persiapan kompetisi resmi.</p>
+                </div>
+            </div>
+
+            <button class="btn-back" onclick="bukaHalaman('main-page')">Kembali</button>
+        </div>
+
+        <footer style="margin-top: 50px; color: #666; font-size: 0.8rem; border-top: 1px solid #222; padding-top: 15px;">
+            <p>&copy; 2026 PANSER FC MATCH MANAGEMENT. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function bukaHalaman(idHalaman) {
+            const semuaHalaman = document.querySelectorAll('.page');
+            semuaHalaman.forEach(halaman => {
+                halaman.classList.add('hidden');
+            });
+
+            const halamanTujuan = document.getElementById(idHalaman);
+            if (halamanTujuan) {
+                halamanTujuan.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
